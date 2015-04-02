@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Simulation. If it's going to operate with Gazebo model -->
+  <arg name="simulation" value="true"/>
+  <arg name="run_robot_state_publisher" value="false"/>
+  
+  <!-- Guardian-terabot gazebo -->
+  <include file="$(find guardian_terabot_gazebo)/launch/guardian_terabot.launch" />
+  <!-- robotnik trajectory control -->
+  <include file="$(find guardian_terabot_moveit_bringup)/launch/robotnik_traj_control/gazebo_trajectory_control.launch" />
+  <!-- Moveit config -->
+  <include file="$(find guardian_terabot_moveit_config)/launch/demo_rtc.launch">
+	  <arg name="simulation" value="$(arg simulation)"/>
+          <arg name="run_robot_state_publisher" value="$(arg run_robot_state_publisher)"/>
+  </include>
+
+   <!-- robotnik trajectory planner -->
+  <include file="$(find guardian_terabot_moveit_bringup)/launch/robotnik_traj_planner/planner.launch" />
+
+</launch>
+

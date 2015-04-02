@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Launches Robotnik trajectory planner -->
+	<node name="rt_traj_planner" pkg="robotnik_trajectory_planner" type="robotnik_trajectory_planner_node" output="screen">
+		<rosparam command="load" file="$(find guardian_terabot_moveit_config)/config/kinematics.yaml"/>
+		<rosparam command="load" file="$(find guardian_terabot_moveit_bringup)/config/robotnik_traj_planner/planner.yaml"/>
+	</node>
+
+</launch>
+

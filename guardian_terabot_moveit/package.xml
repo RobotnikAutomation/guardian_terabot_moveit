@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>guardian_terabot_moveit</name>
+  <version>1.0.0</version>
+  <description>The guardian_terabot_moveit package</description>
+
+  <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
+  <maintainer email="rguzman@robotnik.es">Roberto Guzmán</maintainer>
+
+  <license>BSD</license>
+
+
+  <author email="rnavarro@robotnik.es">Román Navarro</author> 
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>guardian_terabot_moveit_config</run_depend>
+  <run_depend>guardian_terabot_moveit_bringup</run_depend>
+
+  <export><metapackage/></export>
+</package>
